@@ -1,0 +1,7 @@
+file=aaV_main
+pdflatex -shell-escape $file.tex;
+bibtex $file; 
+pdflatex -shell-escape $file.tex;
+pdflatex -shell-escape $file.tex;
+rm -rf *.log *.out *~
+
