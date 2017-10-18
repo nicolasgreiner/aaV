@@ -1,7 +1,25 @@
 \section{Calculational setup}
 \label{sec:setup}
+The results presented in this paper have been obtained by combining the two tools
+\GoSam~\cite{Cullen:2011ac,Cullen:2014yla} and \Sherpa~\cite{Gleisberg:2008ta}
+which allows for a fully automated calculation of cross section and observables and next-to-leading order in QCD as well
+as in the electroweak coupling.
+\GoSam is a package which generates the code for the numerical evaluation of
+the one loop scattering amplitudes starting from the Feynman diagrams,
+generated with \QGraf~\cite{Nogueira:1991ex} and further processed with
+\FORM~\cite{Vermaseren:2000nd,Kuipers:2012rf} and
+\Spinney~\cite{Cullen:2010jv} to perform necessary algebraic
+manipulations to obtain an optimized expression for the matrix elements.
+For the integrand reduction of the diagrams we use the \Ninja
+library~\cite{Peraro:2014cba}, an implementation of the technique of integrand
+reduction via Laurent expansion~\cite{Mastrolia:2012bu,vanDeurzen:2013saa}.
+Alternatively one can choose other reduction strategies such as OPP reduction
+method~\cite{Ossola:2006us,Mastrolia:2008jb,Ossola:2008xq} which is
+implemented in $d$ dimensions in \Samurai~\cite{Mastrolia:2010nb}, or methods based on
+tensor integral reduction as implemented in
+\GolemNF~\cite{Heinrich:2010ax,Binoth:2008uq,Cullen:2011kv,Guillet:2013msa}.
+We have used \OneLoop~\cite{vanHameren:2010cp} to evaluate the scalar integrals.
 
-We do it in a way that works.
 
 We define our central scales through
 \begin{equation}
