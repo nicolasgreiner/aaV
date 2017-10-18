@@ -1,12 +1,12 @@
 # BEGIN PLOT
 CustomLegend=LHC 13 TeV\\$\mu_{R/F}=m_{\gamma\gamma\gamma}$\\CT14 NLO
-DrawOnly=B NLO-QCD NLO-EW NLO-QCD+EW NLO-QCDxEW
+DrawOnly=B NLO-QCD NLO-QCD-JV NLO-EW NLO-QCD+EW NLO-QCD+EW-JV NLO-QCDxEW NLO-QCDxEW-JV
 Legend=1
 Legend1=1
 Legend1Only=B NLO-QCD NLO-EW NLO-QCD+EW NLO-QCDxEW
 Legend1XPos=0.07
 Legend1YPos=0.9
-LegendOnly=//home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_B.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCD.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_EW.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCD+EW.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCDxEW.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3
+LegendOnly=//home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_B.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCD.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCD_JETVETO.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_EW.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCD+EW.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCD+EW_JETVETO.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCDxEW.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3 //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCDxEW_JETVETO.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3
 LegendXPos=0.6
 LegendYPos=0.9
 LogY=0
@@ -20,27 +20,49 @@ RatioPlot1YLabel=d$\sigma$/d$\sigma_\text{LO}$
 RatioPlot1YMajorTickMarks=5
 RatioPlot1YMax=3.4999
 RatioPlot1YMin=0.5001
-RatioPlot1YSize=5
+RatioPlot1YSize=3
 RatioPlot2=1
-RatioPlot2DrawOnly=B NLO-EW
+RatioPlot2DrawOnly=B NLO-QCD-JV NLO-EW NLO-QCD+EW-JV NLO-QCDxEW-JV
 RatioPlot2Reference=B
 RatioPlot2SameStyle=1
 RatioPlot2YLabel=d$\sigma$/d$\sigma_\text{LO}$
-RatioPlot2YMajorTickMarks=10
-RatioPlot2YMax=1.1999
+RatioPlot2YMajorTickMarks=20
+RatioPlot2YMax=1.5999
 RatioPlot2YMin=0.8001
-RatioPlot2YSize=5
+RatioPlot2YSize=3
+RatioPlot3=1
+RatioPlot3DrawOnly=B NLO-EW
+RatioPlot3Reference=B
+RatioPlot3SameStyle=1
+RatioPlot3YLabel=d$\sigma$/d$\sigma_\text{LO}$
+RatioPlot3YMajorTickMarks=10
+RatioPlot3YMax=1.1999
+RatioPlot3YMin=0.8001
+RatioPlot3YSize=3
 Title=\hspace*{94pt}$\text{pp} \to \gamma\gamma\gamma$\; @\; 13 TeV
 XLabel=$\Delta\phi_{\gamma_2\gamma_3}$
 XTwosidedTicks=1
 YLabel=d$\sigma$/d$\Delta\phi$ [pb]
+YMajorTickMarks=5
 YMax=0.016
 YMin=0
 YTwosidedTicks=1
 # END PLOT
 
 
-# BEGIN SPECIAL /MC_TRIPHOTON_NLOEW/dphi_y2y3
+# BEGIN SPECIAL jetveto
+Location=RatioPlot2
+\rput[Bl]{0}(0.04,0.75){$\boldsymbol{p_\mathrm{T}^\mathrm{veto}=\text{\textbf{30\,GeV}}}$}
+# END SPECIAL
+
+
+# BEGIN SPECIAL nojetveto
+Location=RatioPlot1
+\rput[Bl]{0}(0.04,0.75){$\boldsymbol{p_\mathrm{T}^\mathrm{veto}=\infty}$}
+# END SPECIAL
+
+
+# BEGIN SPECIAL label
 Location=MainPlot
 \rput[tr]{90}(1.008,1.){\textsc{Sherpa+GoSam}}
 # END SPECIAL
@@ -113,6 +135,40 @@ Title=NLO QCD
 2.983000e+00	3.140000e+00	1.913911e-03	1.640554e-04	2.086949e-04
 # END HISTO1D
 
+# BEGIN HISTO1D //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCD_JETVETO.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3
+ErrorBandColor={[rgb]{0.13,0.54,0.13}}
+ErrorBandOpacity=0.4
+ErrorBands=1
+ErrorType=env
+LineColor={[rgb]{0.13,0.54,0.13}}
+LineStyle=solid
+LineWidth=2pt
+Name=NLO-QCD-JV
+Path=//home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCD_JETVETO.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3
+Title=NLO QCD
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.570000e-01	2.406819e-03	1.583955e-04	4.749809e-05
+1.570000e-01	3.140000e-01	2.589187e-03	1.726204e-04	5.264140e-05
+3.140000e-01	4.710000e-01	3.102810e-03	2.121777e-04	6.265032e-05
+4.710000e-01	6.280000e-01	3.370745e-03	2.324255e-04	6.977452e-05
+6.280000e-01	7.850000e-01	3.405115e-03	2.327268e-04	6.985987e-05
+7.850000e-01	9.420000e-01	3.575115e-03	2.451261e-04	7.561656e-05
+9.420000e-01	1.099000e+00	3.695820e-03	2.516013e-04	7.839490e-05
+1.099000e+00	1.256000e+00	3.816837e-03	2.568134e-04	7.976178e-05
+1.256000e+00	1.413000e+00	4.042229e-03	2.699153e-04	8.340064e-05
+1.413000e+00	1.570000e+00	4.095242e-03	2.641497e-04	8.232293e-05
+1.570000e+00	1.727000e+00	3.997083e-03	2.431032e-04	6.556178e-05
+1.727000e+00	1.884000e+00	3.577062e-03	2.112280e-04	3.214904e-05
+1.884000e+00	2.041000e+00	2.864420e-03	2.091478e-04	8.233949e-05
+2.041000e+00	2.198000e+00	1.849844e-03	1.720497e-04	2.064051e-04
+2.198000e+00	2.355000e+00	9.016439e-04	8.582357e-05	1.078057e-04
+2.355000e+00	2.512000e+00	4.537422e-04	4.349197e-05	5.452669e-05
+2.512000e+00	2.669000e+00	1.920536e-04	1.854369e-05	2.321803e-05
+2.669000e+00	2.826000e+00	5.446707e-05	5.281134e-06	6.611580e-06
+2.826000e+00	2.983000e+00	6.990484e-06	6.689248e-07	8.385159e-07
+2.983000e+00	3.140000e+00	7.378847e-07	9.323758e-08	1.174331e-07
+# END HISTO1D
+
 # BEGIN HISTO1D //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_EW.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3
 ErrorBandColor=orange
 ErrorBandOpacity=0.4
@@ -178,6 +234,37 @@ Title=NLO QCD+EW
 2.983000e+00	3.140000e+00	1.913911e-03	1.640550e-04	2.086950e-04
 # END HISTO1D
 
+# BEGIN HISTO1D //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCD+EW_JETVETO.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3
+ErrorType=env
+LineColor=red!90!black
+LineStyle=solid
+LineWidth=1.5pt
+Name=NLO-QCD+EW-JV
+Path=//home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCD+EW_JETVETO.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3
+Title=NLO QCD+EW
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.570000e-01	2.406056e-03	1.583960e-04	4.746500e-05
+1.570000e-01	3.140000e-01	2.589641e-03	1.726200e-04	5.266200e-05
+3.140000e-01	4.710000e-01	3.106447e-03	2.121770e-04	6.281800e-05
+4.710000e-01	6.280000e-01	3.377188e-03	2.324250e-04	7.007900e-05
+6.280000e-01	7.850000e-01	3.413396e-03	2.327270e-04	7.025800e-05
+7.850000e-01	9.420000e-01	3.585307e-03	2.451260e-04	7.611700e-05
+9.420000e-01	1.099000e+00	3.708097e-03	2.516010e-04	7.901200e-05
+1.099000e+00	1.256000e+00	3.831012e-03	2.568130e-04	8.049700e-05
+1.256000e+00	1.413000e+00	4.058456e-03	2.699150e-04	8.427300e-05
+1.413000e+00	1.570000e+00	4.112074e-03	2.641500e-04	8.326400e-05
+1.570000e+00	1.727000e+00	4.016339e-03	2.431030e-04	6.672000e-05
+1.727000e+00	1.884000e+00	3.608452e-03	2.112290e-04	3.436500e-05
+1.884000e+00	2.041000e+00	2.893315e-03	2.091480e-04	8.233900e-05
+2.041000e+00	2.198000e+00	1.869142e-03	1.720500e-04	2.064050e-04
+2.198000e+00	2.355000e+00	9.016439e-04	8.582350e-05	1.078061e-04
+2.355000e+00	2.512000e+00	4.537422e-04	4.349200e-05	5.452670e-05
+2.512000e+00	2.669000e+00	1.920536e-04	1.854370e-05	2.321800e-05
+2.669000e+00	2.826000e+00	5.446707e-05	5.281130e-06	6.611580e-06
+2.826000e+00	2.983000e+00	6.990484e-06	6.689250e-07	8.385160e-07
+2.983000e+00	3.140000e+00	7.378847e-07	9.323760e-08	1.174331e-07
+# END HISTO1D
+
 # BEGIN HISTO1D //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCDxEW.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3
 ErrorBandColor=gray
 ErrorBandOpacity=0.4
@@ -211,5 +298,40 @@ Title=NLO QCD$\times$EW
 2.669000e+00	2.826000e+00	2.075207e-03	1.788210e-04	2.273210e-04
 2.826000e+00	2.983000e+00	1.965550e-03	1.687720e-04	2.146370e-04
 2.983000e+00	3.140000e+00	1.913912e-03	1.640560e-04	2.086950e-04
+# END HISTO1D
+
+# BEGIN HISTO1D //home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCDxEW_JETVETO.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3
+ErrorBandColor=gray
+ErrorBandOpacity=0.4
+ErrorBandStyle=vlines*
+ErrorBands=1
+ErrorType=env
+LineColor=black
+LineStyle=solid
+LineWidth=1.5pt
+Name=NLO-QCDxEW-JV
+Path=//home/marek/work/aav-ew/results/yodas/envelopes-aaa/aaa_BVIRS_QCDxEW_JETVETO.yoda/MC_TRIPHOTON_NLOEW/dphi_y2y3
+Title=NLO QCD$\times$EW
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.570000e-01	2.405810e-03	1.583290e-04	4.747800e-05
+1.570000e-01	3.140000e-01	2.589795e-03	1.726610e-04	5.265400e-05
+3.140000e-01	4.710000e-01	3.107713e-03	2.125130e-04	6.274900e-05
+4.710000e-01	6.280000e-01	3.379436e-03	2.330240e-04	6.995500e-05
+6.280000e-01	7.850000e-01	3.416059e-03	2.334740e-04	7.008500e-05
+7.850000e-01	9.420000e-01	3.588702e-03	2.460570e-04	7.590400e-05
+9.420000e-01	1.099000e+00	3.711907e-03	2.526960e-04	7.873600e-05
+1.099000e+00	1.256000e+00	3.834873e-03	2.580270e-04	8.013800e-05
+1.256000e+00	1.413000e+00	4.062493e-03	2.712680e-04	8.381900e-05
+1.413000e+00	1.570000e+00	4.114637e-03	2.654000e-04	8.271300e-05
+1.570000e+00	1.727000e+00	4.016882e-03	2.443080e-04	6.588600e-05
+1.727000e+00	1.884000e+00	3.610107e-03	2.131790e-04	3.244600e-05
+1.884000e+00	2.041000e+00	2.915645e-03	2.128880e-04	8.381200e-05
+2.041000e+00	2.198000e+00	2.240445e-03	2.083790e-04	2.499880e-04
+2.198000e+00	2.355000e+00	9.016522e-04	8.582430e-05	1.078068e-04
+2.355000e+00	2.512000e+00	4.537445e-04	4.349220e-05	5.452700e-05
+2.512000e+00	2.669000e+00	1.920541e-04	1.854370e-05	2.321810e-05
+2.669000e+00	2.826000e+00	5.446715e-05	5.281140e-06	6.611590e-06
+2.826000e+00	2.983000e+00	6.990488e-06	6.689250e-07	8.385160e-07
+2.983000e+00	3.140000e+00	7.378848e-07	9.323760e-08	1.174331e-07
 # END HISTO1D
 
