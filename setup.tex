@@ -20,17 +20,13 @@ tensor integral reduction as implemented in
 \GolemNF~\cite{Heinrich:2010ax,Binoth:2008uq,Cullen:2011kv,Guillet:2013msa}.
 We have used \OneLoop~\cite{vanHameren:2010cp} to evaluate the scalar integrals.
 
-
-We define our central scales through
-\begin{equation}
-  \label{eq:murfdef}
-  \begin{split}
-    \muR^0 = \muF^0 = \ldots
-  \end{split}
-\end{equation}
-and subsequently vary them by the conventional factor 
-of two to estimate higher order contributions.
-
+A selection of one-loop amplitudes contributing to the three 
+considered processes are shown in Figures 
+\ref{fig:aaa:amps}--\ref{fig:aaz:amps}. 
+The highest point loop integrals occuring in $\gamma\gamma\gamma$ 
+production are pentagons, while both $\gamma\gamma e^-\bar\nu_e$ 
+and $\gamma\gamma e^+e^-$ productions include up to hexagons at 
+NLO EW. 
 
 \begin{figure}[t!]
   \begin{tabular}{ccccc}
@@ -41,6 +37,7 @@ of two to estimate higher order contributions.
   \caption{
     Sample diagrams of electroweak virtual corrections to triple 
     photon production.
+    \label{fig:aaa:amps}
   }
 \end{figure}
 
@@ -53,6 +50,7 @@ of two to estimate higher order contributions.
   \caption{
     Sample diagrams of electroweak virtual corrections to diphoton 
     production in association with a lepton-neutrino pair.
+    \label{fig:aaw:amps}
   }
 \end{figure}
 
@@ -65,5 +63,32 @@ of two to estimate higher order contributions.
   \caption{
     Sample diagrams of electroweak virtual corrections to diphoton 
     production in association with a lepton-pair.
+    \label{fig:aaz:amps}
   }
 \end{figure}
+
+\Sherpa, on the other hand, provides the tree-level matrix 
+elements, infrared subtraction, process management and phase-space 
+integration of all contributions to all processes considered in 
+this publication through its tree-level matrix element generator 
+\textsc{Amegic} \cite{Krauss:2001iv}. 
+Its inbuilt infrared subtraction is performed in the QED 
+generalisation of the Catani-Seymour scheme~\cite{Catani:1996vz,
+  Dittmaier:1999mb,Gleisberg:2007md,Kallweit:2014xda,
+  Kallweit:2015dum,Kallweit:2017khh,Schonherr:2017xxx}
+and includes the appropriate initial state mass factorisation 
+counter terms.
+Both programs, \Sherpa and \GoSam, are interfaced through a 
+dedicated interface based on the 
+Binoth Les Houches Accord~\cite{Binoth:2010xt,Alioli:2013nda}. 
+Cross-checks of the tree-level matrix elements of \GoSam and 
+\Sherpa and the renormalized pole coefficients of the virtual 
+corrections of \GoSam and the infrared poles of \Sherpa have 
+been performed for several phase space points spanning 
+multiple kinematic regimes and we have found excellent 
+agreement.
+
+This combination of tools was previously used to calculate the 
+NLO QCD corrections to \ldots \cite{} and the 
+NLO EW corrections to for $\gamma\gamma+0,1,2\,\text{jets}$ production 
+in \cite{Chiesa:2017gqx}.
