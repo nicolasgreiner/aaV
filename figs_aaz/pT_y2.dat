@@ -4,10 +4,10 @@ DrawOnly=B NLO-QCD NLO-QCD-JV NLO-EW NLO-QCD+EW NLO-QCD+EW-JV NLO-QCDxEW NLO-QCD
 Legend=1
 Legend1=1
 Legend1Only=B NLO-QCD NLO-EW NLO-QCD+EW NLO-QCDxEW
-Legend1XPos=0.1
-Legend1YPos=0.5
+Legend1XPos=0.57
+Legend1YPos=0.9
 LegendOnly=//home/marek/work/aav-ew/results/yodas/envelopes-aaz/aaz_B.yoda/MC_AAZ_NLOEW/pT_y2 //home/marek/work/aav-ew/results/yodas/envelopes-aaz/aaz_BVIRS_QCD.yoda/MC_AAZ_NLOEW/pT_y2 //home/marek/work/aav-ew/results/yodas/envelopes-aaz/aaz_BVIRS_QCD_JETVETO.yoda/MC_AAZ_NLOEW/pT_y2 //home/marek/work/aav-ew/results/yodas/envelopes-aaz/aaz_BVIRS_EW.yoda/MC_AAZ_NLOEW/pT_y2 //home/marek/work/aav-ew/results/yodas/envelopes-aaz/aaz_BVIRS_QCD+EW.yoda/MC_AAZ_NLOEW/pT_y2 //home/marek/work/aav-ew/results/yodas/envelopes-aaz/aaz_BVIRS_QCD+EW_JETVETO.yoda/MC_AAZ_NLOEW/pT_y2 //home/marek/work/aav-ew/results/yodas/envelopes-aaz/aaz_BVIRS_QCDxEW.yoda/MC_AAZ_NLOEW/pT_y2 //home/marek/work/aav-ew/results/yodas/envelopes-aaz/aaz_BVIRS_QCDxEW_JETVETO.yoda/MC_AAZ_NLOEW/pT_y2
-LegendXPos=0.6
+LegendXPos=0.2
 LegendYPos=0.9
 LogY=1
 PlotSize=10,5
@@ -39,6 +39,7 @@ RatioPlot3YMajorTickMarks=20
 RatioPlot3YMax=1.1999
 RatioPlot3YMin=0.6001
 RatioPlot3YSize=3
+Rebin=100	2	200	4	280	8	320	16	400	20
 Title=\hspace*{85pt}$\text{pp} \to \gamma\gamma\; e^+e^-$\; @\; 13 TeV
 XLabel=$p_{\mathrm{T},\gamma_2}$ [GeV]
 XTwosidedTicks=1
@@ -51,13 +52,13 @@ YTwosidedTicks=1
 
 # BEGIN SPECIAL jetveto
 Location=RatioPlot2
-\rput[Bl]{0}(0.7,0.75){$\boldsymbol{p_\mathrm{T}^\mathrm{veto}=\text{\textbf{30\,GeV}}}$}
+\rput[Bl]{0}(0.04,0.17){$\boldsymbol{p_\mathrm{T}^\mathrm{veto}=\text{\textbf{30\;GeV}}}$}
 # END SPECIAL
 
 
 # BEGIN SPECIAL nojetveto
 Location=RatioPlot1
-\rput[Bl]{0}(0.7,0.75){$\boldsymbol{p_\mathrm{T}^\mathrm{veto}=\infty}$}
+\rput[Bl]{0}(0.04,0.75){$\boldsymbol{p_\mathrm{T,jet}^\mathrm{veto}=\infty}$}
 # END SPECIAL
 
 

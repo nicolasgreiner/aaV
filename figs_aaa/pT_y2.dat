@@ -51,13 +51,13 @@ YTwosidedTicks=1
 
 # BEGIN SPECIAL jetveto
 Location=RatioPlot2
-\rput[Bl]{0}(0.7,0.75){$\boldsymbol{p_\mathrm{T}^\mathrm{veto}=\text{\textbf{30\,GeV}}}$}
+\rput[Bl]{0}(0.7,0.75){$\boldsymbol{p_\mathrm{T,jet}^\mathrm{veto}=\text{\textbf{30\;GeV}}}$}
 # END SPECIAL
 
 
 # BEGIN SPECIAL nojetveto
 Location=RatioPlot1
-\rput[Bl]{0}(0.7,0.75){$\boldsymbol{p_\mathrm{T}^\mathrm{veto}=\infty}$}
+\rput[Bl]{0}(0.7,0.75){$\boldsymbol{p_\mathrm{T,jet}^\mathrm{veto}=\infty}$}
 # END SPECIAL
 
 
