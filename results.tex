@@ -1,6 +1,32 @@
 \section{Results}
 \label{sec:results}
 
+In this section we present numerical results for the NLO QCD and NLO EW 
+corrections in the production of 
+(at least) two 
+isolated photons, both inclusively and in association with at least one 
+or two jets, $\text{pp}\to \gamma\gamma+0,1,2\,\text{jets}$ at the 
+LHC at a centre-of-mass energy of 13\,TeV. 
+Our calculation is performed in the Standard Model using the complex-mass 
+scheme with the following input parameters
+\begin{center}
+  \begin{tabular}{rclrcl}
+    $\alpha(0)$ &\shortequal& $1/137.03599976$  \qquad &&& \\
+    $m_W$ &\shortequal& $80.385\; \text{GeV}$       & $\Gamma_W$ &\shortequal& $2.085\; \text{GeV}$ \\
+    $m_Z$ &\shortequal& $91.1876\; \text{GeV}$      & $\Gamma_Z$ &\shortequal& $2.4952\; \text{GeV}$ \\
+%     $m_h$ &\shortequal& $125.0\; \text{GeV}$        & $\Gamma_h$ &\shortequal& $0$\\
+    $m_t$ &\shortequal& $171.2\; \text{GeV}$        & $\Gamma_t$ &\shortequal& $0$\;.
+  \end{tabular}
+\end{center}
+The width of the top quark can be safely neglected as there are no 
+diagrams containing it as an $s$-channel resonance which can potentially 
+go on-shell. 
+At the same time there are no diagrams 
+containing the Higgs boson due to the absence of $W$, $Z$ or top quark 
+propagators at LO.
+All other parton masses and widths are set to zero, i.e.\ we are working 
+in the five-flavour scheme.
+
 We use the \textsc{CT14nlo} PDF set with $\alpha_s(m_Z)=0.118$. 
 The use of a QCD-only PDF is justified by the fact that, 
 at LO, the photon induced corrections are negligible.
@@ -239,5 +265,25 @@ $\deltaEW(\muF^0)$
   }
 \end{figure}
 
+
+
+\begin{figure}[t!]
+  \setlength{\unitlength}{\textwidth}
+  \begin{picture}(0,1)
+    \put(0,0.24){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/pT_y1}}
+    \put(0,0.12){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/pT_y2}}
+    \put(0,0){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/pT_l1l2_comb_log}}
+    \put(0.33,0.24){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/m_y1y2_comb_log}}
+    \put(0.33,0.12){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/m_y1l1l2_comb_log}}
+    \put(0.33,0){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/m_y2l1l2_comb_log}}
+    \put(0.66,0.24){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/dphi_y1_y2}}
+    \put(0.66,0.12){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/dphi_y1_l1l2}}
+    \put(0.66,0){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/dphi_y2_l1l2}}
+  \end{picture}
+  \caption{
+    Contribution of $\gamma\gamma$-induced production channels at LO.
+    \label{fig:aaz:aa-ind}
+  }
+\end{figure}
 
 
