@@ -1,0 +1,76 @@
+(run){
+  EVENTS 1M;  ERROR 0.01;
+  $RUNNAME:=aaz;
+  $NLOPART:=B;
+  MI_HANDLER None; FRAGMENTATION Off;
+  SHOWER_GENERATOR None; BEAM_REMNANTS 0;
+  INTRINSIC_KPERP None;
+
+  ME_SIGNAL_GENERATOR Amegic;
+  EVENT_GENERATION_MODE Weighted;
+  RESULT_DIRECTORY res_B;
+  DIPOLE_BORN_FLAVOUR_RESTRICTIONS 22 2;
+  PSI_ITMIN 20000;
+  ANALYSIS Rivet;
+  ANALYSIS_WRITEOUT_INTERVAL 0.01;
+  ANALYSIS_OUTPUT Analysis/$RUNNAME_$NLOPART/;
+
+  BEAM_1 2212; BEAM_ENERGY_1 6500.;
+  BEAM_2 2212; BEAM_ENERGY_2 6500.;
+
+  PDF_LIBRARY LHAPDFSherpa;
+  PDF_SET CT14nlo;
+
+  SCF:=1.; FSF:=SCF; RSF:=SCF;
+  SCLDEF:=0.25*DH_Tp2(Cone,0.1);
+  SCALES VAR{FSF*SCLDEF}{RSF*SCLDEF};
+  SCALE_VARIATIONS 0.25,0.25 0.25,1. 1.,0.25 1.,1. 1.,4. 4.,1. 4.,4.;
+
+  WIDTHSCHEME CMS;
+  EW_SCHEME 3;
+  GMU_CMS_AQED_CONVENTION 0;
+  GF 0.000011663787;
+  MASS[1] 0.;
+  MASS[2] 0.;
+  MASS[3] 0.;
+  MASS[4] 0.;
+  MASS[5] 0.;
+  MASS[6] 173.2;    WIDTH[6] 0.;
+  MASS[23] 91.1876; WIDTH[23] 2.4952;
+  MASS[24] 80.385;  WIDTH[24] 2.085;
+  MASS[25] 125.;    WIDTH[25] 0.00407;
+
+  KFACTOR VAR{sqr((1./137.036)/(1./132.169))}
+}(run);
+
+(processes){
+  Process 93 93 -> 22 22 11 -11;
+  Order (0,4);
+  Print_Graphs Graphs;
+  End process;
+}(processes);
+
+(selector){
+  DressedParticleSelector {
+    DressingAlgorithm Cone 0.1;
+    Isolation_Selector {
+      Isolation_Particles 22;
+      Rejection_Particles 11;
+      Isolation_Parameters R:0.4 EMAX:0.05 EXP:1 ETA:5.0 PT:15.;
+      NMin 2;
+      Mass 11 -11 40. E_CMS;
+      PT  11 20. E_CMS;
+      PT -11 20. E_CMS;
+      Y  11 -2.5 2.5;
+      Y -11 -2.5 2.5;
+    }
+  }
+}(selector)
+
+(analysis){
+BEGIN_RIVET{
+USE_HEPMC_SHORT 1;
+-a MC_AAZ_NLOEW;
+} END_RIVET
+}(analysis)
+
