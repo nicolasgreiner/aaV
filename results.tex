@@ -2,52 +2,73 @@
 \label{sec:results}
 
 In this section we present numerical results for the NLO QCD and NLO EW 
-corrections in the production of 
-(at least) two 
-isolated photons, both inclusively and in association with at least one 
-or two jets, $\text{pp}\to \gamma\gamma+0,1,2\,\text{jets}$ at the 
-LHC at a centre-of-mass energy of 13\,TeV. 
-Our calculation is performed in the Standard Model using the complex-mass 
-scheme with the following input parameters
+corrections to all three production processes of a diphoton pair in 
+association with a third vector boson, a third photon, a $W$ or a $Z$ 
+boson, at the LHC at a centre-of-mass energy of 13\,TeV. 
+In case of an accompanying $W$ or a $Z$ boson, we consider the full 
+off-shell leptonic final state, i.e.\ lepton-neutrino or lepton-pair 
+production.
+All results are obtained in the Standard Model using the complex-mass 
+scheme \cite{Denner:2005fg} with the following input parameters
 \begin{center}
   \begin{tabular}{rclrcl}
-    $\alpha(0)$ &\shortequal& $1/137.03599976$  \qquad &&& \\
+    $\alphazero$ &\shortequal& $1/137.03599976$  \qquad &&& \\
+    $G_\mu$ &\shortequal& $1.1663787\times 10^{-5}\; \text{GeV}^2$ &&& \\
     $m_W$ &\shortequal& $80.385\; \text{GeV}$       & $\Gamma_W$ &\shortequal& $2.085\; \text{GeV}$ \\
     $m_Z$ &\shortequal& $91.1876\; \text{GeV}$      & $\Gamma_Z$ &\shortequal& $2.4952\; \text{GeV}$ \\
-%     $m_h$ &\shortequal& $125.0\; \text{GeV}$        & $\Gamma_h$ &\shortequal& $0$\\
-    $m_t$ &\shortequal& $171.2\; \text{GeV}$        & $\Gamma_t$ &\shortequal& $0$\;.
+    $m_h$ &\shortequal& $125.0\; \text{GeV}$        & $\Gamma_h$ &\shortequal& $0$\\
+    $m_t$ &\shortequal& $173.2\; \text{GeV}$        & $\Gamma_t$ &\shortequal& $0$\;.
   \end{tabular}
 \end{center}
-The width of the top quark can be safely neglected as there are no 
-diagrams containing it as an $s$-channel resonance which can potentially 
-go on-shell. 
-At the same time there are no diagrams 
-containing the Higgs boson due to the absence of $W$, $Z$ or top quark 
-propagators at LO.
-All other parton masses and widths are set to zero, i.e.\ we are working 
-in the five-flavour scheme.
-
-We use the \textsc{CT14nlo} PDF set with $\alpha_s(m_Z)=0.118$. 
+Both the width of the top quark and the Higgs boson can safely be 
+neglected as there are no diagrams containing either as $s$-channel 
+propagators which can potentially go on-shell. 
+All other lepton and parton masses and widths are set to zero, 
+i.e.\ we are working in the five-flavour scheme.
+We use the \textsc{CT14nlo} PDF set with $\alphas(m_Z)=0.118$. 
 The use of a QCD-only PDF is justified by the fact that, 
-at LO, the photon induced corrections are negligible.
+at LO, the photon induced corrections are either non-existant 
+(\aaa, \aaw) or negligible (\aaz).
+This finding will be detailed in Section \ref{sec:results:aaz}.
 
 We define our central scales through
 \begin{equation}
   \label{eq:murfdef}
   \begin{split}
-    \muR^0 = \muF^0 = \ldots
+    \muR^0 = \muF^0 = \left\{
+    \begin{array}{ll}
+      m_{\aaa} \qquad & \text{in \aaa\ production} \\[2mm]
+      \tfrac{1}{2}\,H_T' & \text{in \aaw\ and \aaz\ production.}
+    \end{array}\right.
   \end{split}
 \end{equation}
-and subsequently vary them by the conventional factor 
-of two to estimate higher order contributions.
-
-
-We got those results.
-
+Therein, the modified scalar sum of transverse momenta is defined as 
+\begin{equation}
+  \label{ew:defHT}
+  \begin{split}
+    H_\mathrm{T}' = E_\mathrm{T}^V + \sum_{\gamma,q,g} p_{\mathrm{T},i}
+  \end{split}
+\end{equation}
+with $\left.E_\mathrm{T}^W\right.^2=(p_\ell+p_\nu)^2$ and 
+$\left.E_\mathrm{T}^Z\right.^2=(p_{\ell^+}+p_{\ell^-})^2$ 
+in full analogy to the case of the case of vector boson production 
+in association with jets \cite{}.
+As the Born process in each case has no $\muR$ dependence, we 
+do not expect the choice of scale to have a significant influence 
+on the size of the relative QCD and EW corrections.
 We calculate $\mathrm{B}(\muF)$, $\deltaQCD(\muR,\muF)$ and 
-$\deltaEW(\muF^0)$
+$\deltaEW(\muF^0)$ and vary the free scales $\muR$ and $\muF$ 
+by the conventional factor of two around their central values 
+$\muR^0$ and $\muF^0$, respectively.
+We do not vary the factorisation scale for the determination 
+of $\deltaEW$ as the inherent, albeit normally phenomenologically 
+irrelevant, stabilisation of the $\muF$-dependence at NLO EW 
+is not reflected in our chosen PDF.
+Hence, our NLO EW result exhibits the exact same $\muF$-dependence 
+as the LO result.
 
-\begin{table}[h!]
+
+\begin{table}[t!]
   \centering
   \begin{tabular}{l||c|c|c}
       & $\;\;pp \to \gamma \gamma\gamma\;\;$
@@ -71,7 +92,8 @@ $\deltaEW(\muF^0)$
 \end{table}
 
 
-\subsection{\texorpdfstring{$\boldsymbol{\gamma\gamma\gamma}$}{aaa} production}
+\subsection[\texorpdfstring{$\gamma\gamma\gamma$}{aaa} production]
+           {$\boldsymbol{\gamma\gamma\gamma}$ production}
 \label{sec:results:aaa}
 
 \begin{figure}[t!]
@@ -159,7 +181,8 @@ $\deltaEW(\muF^0)$
 
 
 
-\subsection{\texorpdfstring{$\boldsymbol{\gamma\gamma\ell\nu}$}{aalnu} production}
+\subsection[\texorpdfstring{$\gamma\gamma\ell\nu$}{aalnu} production]
+           {$\boldsymbol{\gamma\gamma\ell\nu}$ production}
 \label{sec:results:aaw}
 
 \comment{MS: is that $\ell^+$ or $\ell^-$?}
@@ -209,7 +232,8 @@ $\deltaEW(\muF^0)$
 \end{figure}
 
 
-\subsection{\texorpdfstring{$\boldsymbol{\gamma\gamma\ell^+\ell^-}$}{aall} production}
+\subsection[\texorpdfstring{$\gamma\gamma\ell^+\ell^-$}{aall} production]
+           {$\boldsymbol{\gamma\gamma\ell^+\ell^-}$ production}
 \label{sec:results:aaz}
 
 \begin{figure}[t!]
@@ -269,7 +293,7 @@ $\deltaEW(\muF^0)$
 
 \begin{figure}[t!]
   \setlength{\unitlength}{\textwidth}
-  \begin{picture}(0,1)
+  \begin{picture}(0,0.37)
     \put(0,0.24){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/pT_y1}}
     \put(0,0.12){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/pT_y2}}
     \put(0,0){\includegraphics[width=0.32\textwidth]{figs_aaz_aa-ind/pT_l1l2_comb_log}}
