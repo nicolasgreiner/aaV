@@ -13,19 +13,27 @@ scheme \cite{Denner:2005fg} with the following input parameters
 \begin{center}
   \begin{tabular}{rclrcl}
     $\alphazero$ &\shortequal& $1/137.03599976$  \qquad &&& \\
-    $G_\mu$ &\shortequal& $1.1663787\times 10^{-5}\; \text{GeV}^2$ &&& \\
+    $\Gmu$ &\shortequal& $1.1663787\times 10^{-5}\; \text{GeV}^2$ &&& \\
     $m_W$ &\shortequal& $80.385\; \text{GeV}$       & $\Gamma_W$ &\shortequal& $2.085\; \text{GeV}$ \\
     $m_Z$ &\shortequal& $91.1876\; \text{GeV}$      & $\Gamma_Z$ &\shortequal& $2.4952\; \text{GeV}$ \\
     $m_h$ &\shortequal& $125.0\; \text{GeV}$        & $\Gamma_h$ &\shortequal& $0$\\
     $m_t$ &\shortequal& $173.2\; \text{GeV}$        & $\Gamma_t$ &\shortequal& $0$\;.
   \end{tabular}
 \end{center}
-Both the width of the top quark and the Higgs boson can safely be 
-neglected as there are no diagrams containing either as $s$-channel 
-propagators which can potentially go on-shell. 
+While we calculate triple photon production in the \alphazero-scheme, 
+we use a mixed scheme for \aaw\ and \aaz production: at LO two 
+powers of $\alpha$ are taken in the \alphazero-scheme, while 
+one power of $\alpha$ is taken in the \Gmu-scheme. 
+The additional power of $\alpha$ in the NLO EW correction 
+is evaluated in \alphazero-scheme again.
+The virtual amplitudes are renormalised correspondingly.
+In all cases both the width of the top quark and the Higgs boson 
+can safely be neglected as there are no diagrams containing either 
+as $s$-channel propagators which can potentially go on-shell. 
 All other lepton and parton masses and widths are set to zero, 
 i.e.\ we are working in the five-flavour scheme.
-We use the \textsc{CT14nlo} PDF set with $\alphas(m_Z)=0.118$. 
+We use the \textsc{CT14nlo} PDF set with $\alphas(m_Z)=0.118$ 
+\cite{}. 
 The use of a QCD-only PDF is justified by the fact that, 
 at LO, the photon induced corrections are either non-existant 
 (\aaa, \aaw) or negligible (\aaz).
@@ -56,8 +64,13 @@ in association with jets \cite{}.
 As the Born process in each case has no $\muR$ dependence, we 
 do not expect the choice of scale to have a significant influence 
 on the size of the relative QCD and EW corrections.
-We calculate $\mathrm{B}(\muF)$, $\deltaQCD(\muR,\muF)$ and 
-$\deltaEW(\muF^0)$ and vary the free scales $\muR$ and $\muF$ 
+We calculate the leading order cross section $\rd\sigma_\text{LO}(\muF)$, 
+which only depends on the factorisation scale $\muF$, the 
+NLO QCD differential correction factor $\deltaQCD(\muR,\muF)$, 
+introducing the additional $\muR$-dependence, and the NLO EW 
+differential correction factor $\deltaEW(\muF^0)$. 
+To estimate the impact of yet to-be-calculated higher-order 
+corrections we vary the free scales $\muR$ and $\muF$ 
 by the conventional factor of two around their central values 
 $\muR^0$ and $\muF^0$, respectively.
 We do not vary the factorisation scale for the determination 
@@ -66,7 +79,37 @@ irrelevant, stabilisation of the $\muF$-dependence at NLO EW
 is not reflected in our chosen PDF.
 Hence, our NLO EW result exhibits the exact same $\muF$-dependence 
 as the LO result.
+We define 
+\begin{equation}
+  \label{eq:defnlo}
+  \begin{split}
+    \rd\sigma_\text{NLO QCD}
+    \,=\;&\rd\sigma_\text{LO}\left(1+\deltaQCD\right)\\
+    \rd\sigma_\text{NLO EW}
+    \,=\;&\rd\sigma_\text{LO}\left(1+\deltaEW\right)\\
+    \rd\sigma_\text{NLO \QCDpEW}
+    \,=\;&\rd\sigma_\text{LO}\left(1+\deltaQCD+\deltaEW\right)\\
+    \rd\sigma_\text{NLO \QCDtEW}
+    \,=\;&\rd\sigma_\text{LO}\left(1+\deltaQCD\right)\left(1+\deltaEW\right)\;.
+  \end{split}
+\end{equation}
+Therein, the difference between NLO \QCDpEW\ and NLO \QCDtEW, which 
+is of relative $\order(\alphas\alpha)$, can serve as an indicator 
+of the potential size of unknown corrections at that order.
 
+In Table \ref{tab:xsec} we quote the inclusive cross sections for all 
+three processes. 
+The fiducial cuts for each process is detailed in its 
+respective subsection below. 
+We note that the NLO QCD corrections for both triple photon 
+production and \aaw\ production are strongly jet veto dependent, 
+a result that was previously discussed in great detail in 
+\cite{Bozzi:2011en,Bozzi:2011wwa}, and will be revisited in the 
+following. 
+A much milder jet veto dependence is found for \aaz\ production. 
+The electroweak corrections to inclusive cross sections are 
+generally much smaller, ranging from ..\% (\aaa) to ..\% (\aaw) 
+and ..\% (\aaz).
 
 \begin{table}[t!]
   \centering
@@ -96,6 +139,40 @@ as the LO result.
            {$\boldsymbol{\gamma\gamma\gamma}$ production}
 \label{sec:results:aaa}
 
+The triple photon production process is defined 
+by the presence of three identified photons in the 
+central detector. 
+To this end we use the smooth cone isolation 
+criterion \cite{Frixione:1998jh}, limiting the amount of 
+hadronic activity in a cone $R_\gamma$ to
+\begin{equation}
+  \begin{split}
+    E_{{\rm had, max}} (r_{\gamma})
+    = \epsilon\, \pT^{\gamma} \left( \frac{1-\cos r_\gamma}
+				       {1-\cos R_\gamma}\right)^{n}\;,
+  \end{split}
+  \label{eq:frix}
+\end{equation}
+where $r_{\gamma}$ denotes the angular separation between the photon and 
+the parton, with 
+\begin{equation}
+  \label{eq:coneparams}
+  \begin{split}
+    R_{\gamma}=0.4\;, \quad \epsilon = 0.05\;, \quad n = 1\;, 
+  \end{split}
+\end{equation}
+to define isolated photon candidates.
+These candidates are then ordered in transverse momentum. 
+We then require at least three such candidates within $|\eta|<2.37$, 
+the leading one of which needs $\pT>40\,\text{GeV}$, 
+while the all subleading ones need only 
+$\pT>30\,\text{GeV}$. 
+Finally, a pairwise separation of $\Delta R(\gamma_i,\gamma_j)>0.4$ 
+between all identified photons is required.
+It is worth noting that at NLO EW it is possible to find more 
+than three isolated photons, in which case any combination may 
+fulfill the above criteria. 
+
 \begin{figure}[t!]
   \centering
   \includegraphics[width=0.32\textwidth]{figs_aaa/pT_y1}
@@ -116,6 +193,51 @@ as the LO result.
   }
 \end{figure}
 
+Figure \ref{fig:aaa:pt} displays the transverse momenta of the 
+first three leading photons. 
+The NLO QCD corrections exhibit a handful of interesting features. 
+Firstly, in the absence of a jet veto the fixed-order calculation 
+exhibits a huge correction factors, mainly induced by the 
+opening of new channels in the real emission. 
+Similar, kinematic constraints present at LO \footnote{
+  At leading order the leading photon needs to be in a different 
+  hemisphere than both the subleading and third leading photon. 
+  Thus, $\Delta\phi_{\gamma_1\gamma_2}$ and $\Delta\phi_{\gamma_1\gamma_3}$ 
+  must be larger that $\tfrac{1}{2}\,\pi$.
+} are released and 
+lead to a larger phase space that can be populated. 
+These findings mandate the inclusion of at least the $\aaa+\text{jet}$ 
+production process at NLO QCD to arrive at a reliable description 
+of inclusive \aaa\ production, and thus either a NNLO QCD calculation 
+or a multijet merging ansatz \cite{Hoeche:2012yf,Kallweit:2015dum}. 
+While the inclusive QCD corrections at very small transverse momenta 
+are universally large for all three leading photon \pT-spectra 
+($\deltaQCD\approx 2$), they remain at exorbitantly large 
+($\deltaQCD\approx 1.5$) throughout the considered range 
+only for the leading jet \pT. 
+For both subleading photons the QCD corrections are quickly 
+decreasing, leveling out at a $\approx 20\%$ at large transverse 
+momenta.
+In the presence of a restrictive jet veto the very low transverse 
+momentum region still experiences large correction of about 
+$\deltaQCD\approx 1$. 
+As transverse momenta are increasing, the QCD corrections now turn 
+negative reaching now $-50-60\%$ and for all three photons. 
+
+The electroweak corrections, due to the absence of the opening 
+of large new channels at the next-to-leading order, are dominated 
+by the virtual corrections. 
+Consequently, the phase space restrictions present at leading 
+order are still respected.
+For all three photons they are small but positive at small 
+transverse momenta and exhibit the usual Sudakov shape at 
+large transverse momenta.
+They reach $-10\%$ for the leading and subleading photon and 
+$-20\%$ for the third photon at $\pT=500\,\text{GeV}$. 
+Due to the different sizes of the QCD and electroweak 
+corrections, the additive and multiplicative combination 
+of corrections lead to very similar results.
+
 \begin{figure}[t!]
   \centering
   \includegraphics[width=0.32\textwidth]{figs_aaa/m_y1y2_comb_log}
@@ -126,13 +248,55 @@ as the LO result.
     leading and third leading photon (centre), subleading and third leading 
     photon (right) 
     in triple photon production at the LHC at 13\,TeV. 
-    Details as in Fig.\ \ref{fig:aaa:pt}.\\
-    \comment{MS: Spike in $m_{\gamma_1\gamma_2}$ is in NLO \QCDtEW\ 
-             and comes from $\deltaEW\approx 10$ in this bin at the 
-             edge of the LO phase space.}
+    Details as in Fig.\ \ref{fig:aaa:pt}.
     \label{fig:aaa:myy}
   }
 \end{figure}
+
+Figure \ref{fig:aaa:myy} continues with the three diphoton 
+invariant masses. 
+The \pT\ and $\Delta R$ requirements 
+of the event selection induce a minimum in the distributions 
+at leading order. 
+The region below can only be filled if a fourth particle is 
+present, as is the case in both the QCD and electroweak real 
+emission corrections, leading to simultaneously huge 
+corrections \deltaQCD\ and \deltaEW\ as the Born cross 
+section vanishes. 
+Due to this behaviour, the multiplicative combination of 
+corrections, NLO \QCDtEW, ceases to be well defined and 
+spikes in the distribution are visible.
+The distributions below, where $\rd\sigma_\text{LO}=0$, 
+are ill-defined. 
+In consequence, for distributions where kinematic boundaries 
+exist at leading order, but are lifted at higher orders, 
+the multiplicative combination does not present a viable 
+option for a good description of the observable 
+throughout phase space. 
+
+The QCD corrections themselves again exceed $200\%$ at 
+small invariant masses, already well before the above 
+described kinematic boundary effect takes hold. 
+As the invariant masses are increasing, the 
+QCD corrections are dropping to $20-30\%$ for the inclusive 
+selection. 
+The structure the QCD corrections exhibit around 80-90\,GeV 
+in all three diphoton-pair invariant masses are induced by 
+the acceptance cuts.
+In the presence of the jet veto, the QCD corrections are 
+reduced and turn negative beyond $m_{\gamma\gamma}\gtrsim 300\,\text{GeV}$ 
+reaching around $-40\%$ at 1\,TeV. 
+The electroweak corrections, on the other hand, are 
+again moderate, ranging from $+1.5\%$ between 70 and 200\,GeV 
+for $m_{\gamma_1\gamma_2}$ and $m_{\gamma_1\gamma_2}$ and 
+0 and 100\,GeV for $m_{\gamma_2\gamma_3}$. 
+$m_{\gamma_1\gamma_2}$ exhibits a small rise in the correction 
+at $2m_W$ due to resonant box diagrams in that region. 
+This feature is also present in the electroweak corrections 
+to diphoton production in this observable \cite{Chiesa:2017gqx}. 
+At large transverse momentum the usual Sudakov logarithms 
+are recoveren, resulting in corrections of around 
+$-8\%$ at 1\,TeV for all photon-pair invariant masses. 
 
 \begin{figure}[t!]
   \centering
@@ -144,39 +308,27 @@ as the LO result.
     leading and third leading photon (centre), subleading and third leading 
     photon (right) 
     in triple photon production at the LHC at 13\,TeV. 
-    Details as in Fig.\ \ref{fig:aaa:pt}.\\
-    \comment{MS: Spike in $\Delta\phi_{\gamma_2\gamma_3}$ is in NLO \QCDtEW\ 
-             and comes from $\deltaEW\approx 2$ in this bin at the 
-             edge of the LO phase space.}
+    Details as in Fig.\ \ref{fig:aaa:pt}.
     \label{fig:aaa:dphi}
   }
 \end{figure}
 
+Finally, in Figure \ref{fig:aaa:dphi} we show the azimuthal 
+separation $\Delta\phi$ between all three diphoton pairs. 
+Similar features as before are visible as both the NLO QCD 
+and NLO EW corrections relax the kinematic boundaries of 
+the leading order calculation. 
+Especially the azimuthal separation of the leading and 
+third leading photon receives substantial shape corrections 
+throughout the entire spectrum, with and without the 
+presence of a jet veto. 
+The electroweak corrections are negligible for this 
+observable.
+
+
 \begin{itemize}
   \item \pT of 3rd photon much softer than 1st and 2nd
-  \item EW corrections to \pT of 1st and 2nd photon nearly identical and 
-        $\approx -10\%$ at 500\,GeV, 3rd photon almost twice that.
   \item in all cases NLO EW outside LO uncertainty band
-  \item NLO QCD dominated by real corrections, i.e.\ additional 
-        jet emissions
-  \item intensified through opening of new $qg$ channels and large 
-        gluon luminosity
-  \item can be controlled in fixed-order calculations through jet veto, 
-        needs proper multijet merging
-  \item because at LO the leading jet needs to be in the opposite 
-        hemisphere as the subleading and third leading jet, 
-        $m_{\gamma_1\gamma_2}$ and $m_{\gamma_1\gamma_3}$ 
-        exhibit kinematic edges at LO
-  \item kinematic conditions relaxed at NLO (both QCD and EW, 
-        but QCD dominating), large corrections around those edges, 
-        leads to artifacts in multiplicative combination
-  \item NLO QCD very similar for $m_{\gamma_1\gamma_2}$ and 
-	$m_{\gamma_1\gamma_3}$, $m_{\gamma_2\gamma_3}$ with interesting 
-	structure around 80-90\,GeV
-  \item $m_{\gamma_1\gamma_2}$ again exhibits small excess at $2m_W$
-  \item small positive EW corrections at small $m_{\gamma\gamma}$ 
-  \item $\approx -10\%$ at 1\,TeV for all $m_{\gamma\gamma}$ 
-  \item NLO EW very similar for all $m_{\gamma\gamma}$ 
 \end{itemize}
 
 
