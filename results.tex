@@ -342,7 +342,27 @@ observable.
            {$\boldsymbol{\gamma\gamma\ell\nu}$ production}
 \label{sec:results:aaw}
 
-Next we move on 
+Next we move on to diphoton production in association with 
+a $W$ boson decaying leptonically.
+In this context, we will representatively focus on $W^-$ bosons 
+as we do not expect qualitatively different results for $W^+$ 
+bosons. 
+We define our fiducial phase space by the following. 
+First, we require the presence of exactly one charged lepton, 
+dressed with all photons in a cone of size $R=0.1$, with 
+$\pT>20\,\text{GeV}$ and $|\eta|<2.47$. 
+Among the remaining photons we require at least two identified 
+ones, using the procedure described in Sec.\ \ref{sec:results:aaa}, 
+only changing the transverse momentum requirements to 
+$\pT>20\,\text{GeV}$ for both the leading and the subleading 
+identified photon. 
+We further demand the angular separation of both photons 
+to be $\Delta R(\gamma_1,\gamma_2)>0.4$ and each photon and 
+the lepton to be $\Delta R(\ell,\gamma)>0.4$.
+We put no requirements on the missing transverse momentum. 
+The inclusive cross sections and correction factors were 
+detailed in Tab.\ \ref{tab:xsec}.
+\comment{MS: Nico, please check!}
 
 \begin{figure}[t!]
   \centering
@@ -356,6 +376,59 @@ Next we move on
   }
 \end{figure}
 
+Figure \ref{fig:aaw:pt} shows the transverse momenta of 
+the leading and subleading photon as well as the charged 
+lepton. 
+As was observed in tiple photon production, the inclusive 
+NLO QCD corrections are large. 
+Nonetheless, they differ substatially between the three 
+oberservables and in their different regions. 
+While $\deltaQCD$ rises from values of 0.3 at small 
+transverse momenta of the leading photon to 2 at 
+$\pT\approx 100\,\text{GeV}$, it remains constant above that 
+value.
+In the subleading photon's transverse momentum, the 
+situation is different. 
+Experiencing a cut-induced jump from 0.3 to 2.5 at low \pT, 
+it decreases steadily thereafter to reach $\deltaQCD=0.8$ 
+at 500\,GeV. 
+The behaviour of the QCD corrections to the lepton \pT are 
+then again qualitatively similar to that of the leading 
+photon, start at $\deltaQCD=0.8$ at low \pT and rising 
+steeply to 2.5 at 100\,GeV and then gradually leveling out 
+at 3.5. 
+Again, the presence of a restrictive jet veto has little 
+effect on the small transverse momentum regions, but 
+effectively contains the size of the NLO QCD corrections 
+to remain below $\deltaQCD=0.5$. 
+Instead, they are again driven negative, reaching 
+$-20-30\%$ for all three observables. 
+
+The electroweak corrections are negative throughout, 
+reaching $-20\%$ for the leading photon and the lepton 
+and $-20\%$ for the subleading photon at 500\,GeV. 
+For this process, starting at transverse momenta of 
+around 100\,GeV, the electroweak corrections are much 
+larger than the LO uncertainty estimate.
+Due to their larger size, as compared with the \aaa\ 
+production process, the difference between their 
+additive and multiplicative combination with the 
+QCD corrections becomes more pronounced when no 
+jet veto is applied. 
+One reason is that the QCD corrections are dominated 
+by real emission contributions, which only receive the 
+not-so-small electroweak correction factor in the 
+multiplicative combination, but not the additive one. 
+While this correction factor is, strictly speaking, 
+associated only with the Born configuration, its 
+application to real-emission configurations is well 
+motivated in the electroweak Sudakov-regime at 
+large transverse momenta. 
+The concurrence of the additive and multiplicative 
+schemes in the presence of the jet veto now precisely 
+originates in the taming of the QCD corrections by 
+restricting the influence of real-emission topologies. 
+
 \begin{figure}[t!]
   \centering
   \includegraphics[width=0.32\textwidth]{figs_aaw/m_y1y2_comb_log}
@@ -364,13 +437,42 @@ Next we move on
   \caption{
     Pairwise invariant mass of the leading and subleading photon (left),
     leading and third leading photon (centre), subleading and third leading 
-    photon (right) at the LHC at 13\,TeV.\\
-    \comment{MS: Spike in $m_{\gamma_1\gamma_2}$ is in NLO \QCDtEW 
-             and comes from $\deltaEW\approx 10$ in this bin at the 
-             edge of the LO phase space.}
+    photon (right) at the LHC at 13\,TeV.
     \label{fig:aaw:myy}
   }
 \end{figure}
+
+Considering now the invariant mass of both photons 
+and the leading photon and the lepton, presented in 
+Figure \ref{fig:aaw:myy}, a similar picture 
+presents itself. 
+Both QCD corrections are moderate at small invariant 
+masses and increase as the invariant mass rises. 
+While $m_{\gamma_1\gamma_2}$ developes a correction 
+factor of $\deltaQCD=2$ at 200\,GeV and then falls 
+again to 0.4 at 1\,TeV, $m_{\gamma_1\ell}$ only 
+reaches a maximum of $\deltaQCD=1.3$ before falling 
+to 0.4 as well. 
+In the presence of a jet veto, the shape of the corrections 
+remains similar, but their magnitude is contained to 
+be smaller than 0.5, turning negative around 500\,GeV 
+for both observables. 
+The electroweak corrections are again negative 
+throughout, reaching $-15-20\%$ at invariant masses 
+of 1\,TeV.
+Again, above 200\,GeV they are consistently outside 
+the LO uncertainty estimate and play an important 
+role.
+
+Figure \ref{fig:aaa:myy} also displays the transverse 
+mass of the $W$ boson on the right hand side. 
+This distribution exhibits the general features known 
+from inclusive $W$ production, only the QCD corrections 
+are scaled to the values present in this process.
+Electroweak corrections are less pronounced than for 
+the invariant masses, but are still non-negligible. 
+They reach about $-8\%$ at $m_\text{T}=200\,\text{GeV}$ 
+and $-14\%$ at 1\,TeV.
 
 \begin{figure}[t!]
   \centering
@@ -380,18 +482,63 @@ Next we move on
   \caption{
     Azimuthal separation of the leading and subleading photon (left),
     leading and third leading photon (centre), subleading and third leading 
-    photon (right) at the LHC at 13\,TeV.\\
-    \comment{MS: Spike in $m_{\gamma_1\gamma_2}$ is in NLO \QCDtEW 
-             and comes from $\deltaEW\approx 10$ in this bin at the 
-             edge of the LO phase space.}
+    photon (right) at the LHC at 13\,TeV.
     \label{fig:aaw:dphi}
   }
 \end{figure}
+
+Finally, Figure \ref{fig:aaw:dphi} presents the azimuthal 
+separations of the leading and the subleading photon, and 
+both the leading and subleading photon and the lepton. 
+Contrary to \aaa\ production, no kinematic constraints 
+are present at LO, owing to the difference in flavour 
+between the considered objects and the fact that the 
+lepton is only one of two decay products of the $W$ which 
+takes the role of the third photon from point of view of 
+the contributing diagrams. 
+
+Both the QCD and EW corrections are generally flat, taking 
+values of typically $\deltaQCD=1-2$ in absence and 
+$\deltaQCD=0.4$ in presence of a jet veto, and 
+$\deltaEW=-2\%$.
+
+
+As none of the observables considered for this process 
+exhibits a kinematic boundary at LO that is lifted at 
+NLO, both the additive and the multiplicative combination 
+of QCD and EW corrections present a viable prediction 
+throughout and their difference can be taken as an 
+indication of the potential size of higher-order corrections 
+of $\order(\alphas\alpha)$.
+
 
 
 \subsection[\texorpdfstring{$\gamma\gamma\ell^+\ell^-$}{aall} production]
            {$\boldsymbol{\gamma\gamma\ell^+\ell^-}$ production}
 \label{sec:results:aaz}
+
+Finally, we consider diphoton production in association with 
+a $Z$ boson in its leptonic decay channel. 
+In practise we look at lepton pair production including 
+all non-resonant diagrams.
+The fiducial phase space of our analysis is defined as follows. 
+First, we require the presence of exactly one lepton pair 
+of opposite charge, dressed with all photons in a cone of 
+size $R=0.1$, with $\pT>20\,\text{GeV}$ and $|\eta|<2.47$. 
+Their invariant mass must be larger than 40\,GeV. 
+As in the case of \aaw production, we then require at least 
+two identified photons among the remaining ones after dressing, 
+using the procedure described in Sec.\ \ref{sec:results:aaa}, 
+again loosening the transverse momentum requirements to 
+$\pT>20\,\text{GeV}$ for both the leading and the subleading 
+identified photon. 
+We further demand the angular separation of both photons 
+to be $\Delta R(\gamma_1,\gamma_2)>0.4$ and each photon and 
+the lepton to be $\Delta R(\ell,\gamma)>0.4$.
+We put no requirements on the missing transverse momentum. 
+The inclusive cross sections and correction factors were 
+detailed in Tab.\ \ref{tab:xsec}.
+\comment{MS: Nico, please check!}
 
 \begin{figure}[t!]
   \centering
@@ -419,10 +566,7 @@ Next we move on
     photon and the lepton pair (right)
     in diple photon production in association with a lepton pair 
     at the LHC at 13\,TeV. 
-    Details as in Fig.\ \ref{fig:aaa:pt}.\\
-    \comment{MS: Spike in $m_{\gamma_1\ell_1\ell_2}$ is in NLO \QCDtEW\ 
-             and comes from $\deltaEW\approx 10$ in this bin at the 
-             edge of the LO phase space.}
+    Details as in Fig.\ \ref{fig:aaa:pt}.
     \label{fig:aaz:myy}
   }
 \end{figure}
@@ -438,10 +582,7 @@ Next we move on
     photon and the lepton pair (right)
     in diple photon production in association with a lepton pair 
     at the LHC at 13\,TeV. 
-    Details as in Fig.\ \ref{fig:aaa:pt}.\\
-    \comment{MS: Spike in $\Delta\phi_{\gamma_1,\ell_1\ell_2}$ is in NLO \QCDtEW\ 
-             and comes from $\deltaEW\approx 10$ in this bin at the 
-             edge of the LO phase space.}
+    Details as in Fig.\ \ref{fig:aaa:pt}.
     \label{fig:aaz:dphi}
   }
 \end{figure}
