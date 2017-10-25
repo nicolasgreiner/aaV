@@ -19,6 +19,11 @@
 %% 
 %\usepackage{titlesec}
 
+\newlength{\unitcharwidth}
+\settowidth{\unitcharwidth}{1}
+
+\newlength{\unitsuperscriptwidth}
+\settowidth{\unitsuperscriptwidth}{\scriptsize 1}
 
 
 %%% Macros
@@ -35,6 +40,7 @@
 \newcommand{\pT}{\ensuremath{p_\text{T}}}
 \newcommand{\pTveto}{\ensuremath{p_\text{T,jet}^\text{veto}}}
 \newcommand{\order}{\ensuremath{\mathcal{O}}}
+\newcommand{\vP}{\ensuremath{\vphantom{\int_a^b}}}
 
 \newcommand{\Sherpa}{S\scalebox{0.8}{HERPA}\xspace}
 \newcommand{\GoSam}{G\scalebox{0.8}{O}S\scalebox{0.8}{AM}\xspace}
