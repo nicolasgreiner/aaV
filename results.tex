@@ -33,7 +33,7 @@ as $s$-channel propagators which can potentially go on-shell.
 All other lepton and parton masses and widths are set to zero, 
 i.e.\ we are working in the five-flavour scheme.
 We use the \textsc{CT14nlo} PDF set with $\alphas(m_Z)=0.118$ 
-\cite{}. 
+\cite{Dulat:2015mca}, interfaced through LHAPDF6 \cite{Buckley:2014ana}. 
 The use of a QCD-only PDF is justified by the fact that, 
 at LO, the photon induced corrections are either non-existant 
 (\aaa, \aaw) or negligible (\aaz).
@@ -42,15 +42,16 @@ This finding will be detailed in Section \ref{sec:results:aaz}.
 We define our central scales through
 \begin{equation}
   \label{eq:murfdef}
-  \begin{split}
-    \muR^0 = \muF^0 = \left\{
-    \begin{array}{ll}
-      m_{\aaa} \qquad & \text{in \aaa\ production} \\[2mm]
-      \tfrac{1}{2}\,H_T' & \text{in \aaw\ and \aaz\ production.}
-    \end{array}\right.
-  \end{split}
+  %\begin{split}
+    \muR^0 = \muF^0 = %\left\{
+    %\begin{array}{ll}
+     % m_{\aaa} \qquad & \text{in \aaa\ production} \\[2mm]
+      \tfrac{1}{2}\,H_T' \;. %& \text{in \aaw\ and \aaz\ production.}
+    %\end{array}\right.
+  %\end{split}
 \end{equation}
-Therein, the modified scalar sum of transverse momenta is defined as 
+In the case of the triple photon process $ H_\mathrm{T}' $ is just given by the scalar sum of all final state 
+transverse momenta, for the two processes with the massive vector bosons it is defined as 
 \begin{equation}
   \label{ew:defHT}
   \begin{split}
@@ -60,7 +61,7 @@ Therein, the modified scalar sum of transverse momenta is defined as
 with $\left.E_\mathrm{T}^W\right.^2=(p_\ell+p_\nu)^2$ and 
 $\left.E_\mathrm{T}^Z\right.^2=(p_{\ell^+}+p_{\ell^-})^2$ 
 in full analogy to the case of the case of vector boson production 
-in association with jets \cite{}.
+in association with jets \cite{Berger:2009ep}.
 As the Born process in each case has no $\muR$ dependence, we 
 do not expect the choice of scale to have a significant influence 
 on the size of the relative QCD and EW corrections.
@@ -109,7 +110,7 @@ following.
 A much milder jet veto dependence is found for \aaz\ production. 
 The electroweak corrections to inclusive cross sections are 
 generally much smaller, ranging from $0.6\%$ (\aaa) to $-1.8\%$ (\aaw) 
-and $-4.6\%$ (\aaz).
+and $-4.4\%$ (\aaz).
 
 \begin{table}[t!]
   \input{xs}
@@ -291,7 +292,7 @@ at $2m_W$ due to resonant box diagrams in that region.
 This feature is also present in the electroweak corrections 
 to diphoton production in this observable \cite{Chiesa:2017gqx}. 
 At large transverse momentum the usual Sudakov logarithms 
-are recoveren, resulting in corrections of around 
+are recovered, resulting in corrections of around 
 $-8\%$ at 1\,TeV for all photon-pair invariant masses. 
 Most importantly, beyond $m_{\gamma\gamma}\gtrsim 300\,\text{GeV}$, 
 the electroweak corrections are again not covered by the LO 
@@ -337,7 +338,7 @@ bosons.
 We define our fiducial phase space by the following. 
 First, we require the presence of exactly one charged lepton, 
 dressed with all photons in a cone of size $R=0.1$, with 
-$\pT>20\,\text{GeV}$ and $|\eta|<2.47$. 
+$\pT>20\,\text{GeV}$ and $|\eta|<2.5$. 
 Among the remaining photons we require at least two identified 
 ones, using the procedure described in Sec.\ \ref{sec:results:aaa}, 
 only changing the transverse momentum requirements to 
@@ -345,11 +346,12 @@ $\pT>20\,\text{GeV}$ for both the leading and the subleading
 identified photon. 
 We further demand the angular separation of both photons 
 to be $\Delta R(\gamma_1,\gamma_2)>0.4$ and each photon and 
-the lepton to be $\Delta R(\ell,\gamma)>0.4$.
-We put no requirements on the missing transverse momentum. 
+the lepton to be $\Delta R(\ell,\gamma)>0.7$.
+Furthermore we require the transverse mass of the lepton-neutrino system
+to be larger than $40\, \text{GeV}$.
 The inclusive cross sections and correction factors were 
 detailed in Tab.\ \ref{tab:xsec}.
-\comment{MS: Nico, please check!}
+
 
 \begin{figure}[t!]
   \centering
@@ -366,7 +368,7 @@ detailed in Tab.\ \ref{tab:xsec}.
 Figure \ref{fig:aaw:pt} shows the transverse momenta of 
 the leading and subleading photon as well as the charged 
 lepton. 
-As was observed in tiple photon production, the inclusive 
+As was observed in triple photon production, the inclusive 
 NLO QCD corrections are large. 
 Nonetheless, they differ substatially between the three 
 oberservables and in their different regions. 
@@ -381,7 +383,7 @@ it decreases steadily thereafter to reach $\deltaQCD=0.8$
 at 500\,GeV. 
 The behaviour of the QCD corrections to the lepton \pT are 
 then again qualitatively similar to that of the leading 
-photon, start at $\deltaQCD=0.8$ at low \pT and rising 
+photon, start at $\deltaQCD=0.8$ at low \pT \, and rising 
 steeply to 2.5 at 100\,GeV and then gradually leveling out 
 at 3.5. 
 Again, the presence of a restrictive jet veto has little 
@@ -393,7 +395,7 @@ $-20-30\%$ for all three observables.
 
 The electroweak corrections are negative throughout, 
 reaching $-20\%$ for the leading photon and the lepton 
-and $-20\%$ for the subleading photon at 500\,GeV. 
+and $-25\%$ for the subleading photon at 500\,GeV. 
 For this process, starting at transverse momenta of 
 around 100\,GeV, the electroweak corrections are much 
 larger than the LO uncertainty estimate.
@@ -451,7 +453,7 @@ Again, above 200\,GeV they are consistently outside
 the LO uncertainty estimate and play an important 
 role.
 
-Figure \ref{fig:aaa:myy} also displays the transverse 
+Figure \ref{fig:aaw:myy} also displays the transverse 
 mass of the $W$ boson on the right hand side. 
 This distribution exhibits the general features known 
 from inclusive $W$ production, only the QCD corrections 
@@ -516,16 +518,14 @@ Their invariant mass must be larger than 40\,GeV.
 As in the case of \aaw production, we then require at least 
 two identified photons among the remaining ones after dressing, 
 using the procedure described in Sec.\ \ref{sec:results:aaa}, 
-again loosening the transverse momentum requirements to 
-$\pT>20\,\text{GeV}$ for both the leading and the subleading 
+loosening the transverse momentum requirements to 
+$\pT>15\,\text{GeV}$ for both the leading and the subleading 
 identified photon. 
 We further demand the angular separation of both photons 
 to be $\Delta R(\gamma_1,\gamma_2)>0.4$ and each photon and 
 the lepton to be $\Delta R(\ell,\gamma)>0.4$.
-We put no requirements on the missing transverse momentum. 
 The inclusive cross sections and correction factors were 
 detailed in Tab.\ \ref{tab:xsec}.
-\comment{MS: Nico, please check!}
 
 \begin{figure}[t!]
   \centering
@@ -557,7 +557,7 @@ reduces the QCD corrections further.
 Beyond the negligible impact at very small transverse 
 momenta, they turn negative early on, reaching $\deltaQCD=-0.2-0.4$ 
 at 500\,GeV. 
-The electroweak corrections negative throughout, increasing 
+The electroweak corrections are negative throughout, increasing 
 from $\deltaEW=-4\%$ at low transverse momenta to $-20\%$ at 
 500\,GeV.
 They are consistently larger than the LO uncertainty estimate. 
