@@ -1,5 +1,5 @@
 # BEGIN PLOT
-CustomLegend=LHC 13 TeV\\$\mu_{R/F}=m_{\gamma\gamma\gamma}$\\CT14 NLO
+CustomLegend=LHC 13 TeV\\$\mu_{R/F}=\tfrac{1}{2}\,H_\mathrm{T}'$\\CT14 NLO
 DrawOnly=B NLO-QCD NLO-QCD-JV NLO-EW NLO-QCDxEW NLO-QCDxEW-JV NLO-QCD+EW NLO-QCD+EW-JV 
 Legend=1
 Legend1=1
