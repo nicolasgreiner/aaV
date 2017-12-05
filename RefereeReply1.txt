@@ -7,7 +7,9 @@ manuscript.  We thereby follow the referee's initial ordering:
 2)
 3)
 4)
-5)
+5)  We have somewhat improved the plots to better distinguish the 
+    results with and without a jet veto. The caption of Fig. 1 is 
+    amended accordingly.
 6)
 7)
 8)  The figure captions have been corrected.
