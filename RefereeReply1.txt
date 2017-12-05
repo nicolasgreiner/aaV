@@ -3,30 +3,26 @@ comments.  The points raised clearly helped us to further improve the
 quality of the manuscript.  Below we give detailed replies to the referee's 
 queries and indicate the corresponding adjustments or additions to the 
 manuscript.  We thereby follow the referee's initial ordering: 
-1) 
-2)
-3)
-4)
-5)  We have somewhat improved the plots to better distinguish the 
-    results with and without a jet veto. The caption of Fig. 4 is 
-    amended accordingly. The focus, however, is on the ratios where 
-    only a subset of results is plotted and legibility is, in our 
-    estimation, sufficient for the points raised in the manuscript.
-6)  As detailed in the manuscript in the paragraph above eq. (3.3), 
-    we compute the LO result including its factorisation scale 
-    uncertainty, and the EW correction factor for the central scale 
-    choice. The NLO EW result, according to eq. (3.3) thus carries 
-    the LO factorisation scale uncertainty.
-    As labeled, the plots themselves show not delta-EW, which we compute only 
-    for the central scale choice, but the full NLO EW result exhibiting 
-    the LO factorisation scale uncertainty. In the ratios the NLO EW 
-    result in relation to the central LO prediction is shown, i.e. 
-    the resulting uncertainty band has the same relative size as 
-    the LO uncertainty band.
-    We have amended the caption of Fig. 4 to explicitly reflect 
-    the reference of the ratio plots.
-7)  We have rendered this statement more precise and hope that it 
-    is clear now.
+1) The use of alpha(0) is motivated by the real emission that takes place at
+   q^2=0. In order to obtain pole cancellation between the reals and the virtuals
+   we chose the same factor for the virtual contribution. We are aware that there
+   are other valid choices, however, at least in this case, the differences are small
+   compared to the genuine electroweak corrections. We added a corresponding sentence
+   about the motivation of the choice to the draft.
+2) Renormalization- and factorization scale have been varied indepedently from 1/2 to 2 within 
+   a 7 point scale variation, i.e. the combinations 0.5/2 and 2/0.5 are not present. The scale
+   uncertainty has then be determined by the envelope of the various results.
+   We added this information to the draft.
+3) We added a sentence stating this explicitly.
+4) The only analysis for three or more photons (Ref 6) focusses on heavy intermediate BSM
+   particles. Therefore it did not make sense to adopt this set of cuts and we rather used generic
+   cuts similar to the one applied for diphoton searches (i.e. asymmetric cuts between 1st and
+   2nd photon). But they are not according to a specific experimental analysis. Nevertheless 
+   they have been chosen in such a way that they are likely to be similar/comparable to a possible
+   experimental analysis.
+5)
+6)
+7)
 8)  The figure captions have been corrected.
 9)  This has been rephrased to clearly state which particles the invariant 
     mass cut acts on.
