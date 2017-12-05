@@ -8,10 +8,25 @@ manuscript.  We thereby follow the referee's initial ordering:
 3)
 4)
 5)  We have somewhat improved the plots to better distinguish the 
-    results with and without a jet veto. The caption of Fig. 1 is 
-    amended accordingly.
-6)
-7)
+    results with and without a jet veto. The caption of Fig. 4 is 
+    amended accordingly. The focus, however, is on the ratios where 
+    only a subset of results is plotted and legibility is, in our 
+    estimation, sufficient for the points raised in the manuscript.
+6)  As detailed in the manuscript in the paragraph above eq. (3.3), 
+    we compute the LO result including its factorisation scale 
+    uncertainty, and the EW correction factor for the central scale 
+    choice. The NLO EW result, according to eq. (3.3) thus carries 
+    the LO factorisation scale uncertainty.
+    As labeled, the plots themselves show not delta-EW, which we compute only 
+    for the central scale choice, but the full NLO EW result exhibiting 
+    the LO factorisation scale uncertainty. In the ratios the NLO EW 
+    result in relation to the central LO prediction is shown, i.e. 
+    the resulting uncertainty band has the same relative size as 
+    the LO uncertainty band.
+    We have amended the caption of Fig. 4 to explicitly reflect 
+    the reference of the ratio plots.
+7)  We have rendered this statement more precise and hope that it 
+    is clear now.
 8)  The figure captions have been corrected.
 9)  This has been rephrased to clearly state which particles the invariant 
     mass cut acts on.
