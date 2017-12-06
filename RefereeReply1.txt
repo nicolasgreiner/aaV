@@ -30,8 +30,8 @@ manuscript.  We thereby follow the referee's initial ordering:
 11) 
 12) The description of the observables has been enhanced in the following 
     cases:
-    - 
-    - 
+    - Figure 6
+    - Figures 8,11
 13) We agree and added a sentence stating exactly that.
 
 We again would like to thank for the his/her feedback that clearly helped us to 
