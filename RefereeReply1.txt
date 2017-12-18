@@ -27,7 +27,7 @@ manuscript.  We thereby follow the referee's initial ordering:
 9)  This has been rephrased to clearly state which particles the invariant 
     mass cut acts on.
 10) The PDFs have been specified, and the respective publication referenced.
-11) 
+11) Added reference to 1412.7421 and 1510.08742
 12) The description of the observables has been enhanced in the following 
     cases:
     - Figure 6
