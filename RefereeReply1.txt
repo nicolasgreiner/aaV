@@ -20,9 +20,20 @@ manuscript.  We thereby follow the referee's initial ordering:
    2nd photon). But they are not according to a specific experimental analysis. Nevertheless 
    they have been chosen in such a way that they are likely to be similar/comparable to a possible
    experimental analysis.
-5)
-6)
-7)
+5) We have slightly improved the readability of the plots by adopting 
+   dashed line styles for the jet vetoed NLO QCD prodictions and their 
+   derivatives. The main focus, however, is on the ratio plots where 
+   the lines lines are fewer and better to differentiate. The absolute 
+   plot only serves to give the order of magnitude of the respective 
+   cross sections.
+6) The scales are determined by building an envelope around the 
+   variation of the scaledependences detailed between eq. (3.2) and 
+   (3.3). The ratio is then taken with respect to the central LO 
+   prediction. "Hence, our NLO EW results exhibits the exact same 
+   muF-dependence as the LO result", as is stated in the text directly 
+   above eq. (3.3).
+7) We have completed the sentence with mathematical relations of the sizes 
+   of the QCD and EW corrections, it should be much clearer now.
 8)  The figure captions have been corrected.
 9)  This has been rephrased to clearly state which particles the invariant 
     mass cut acts on.
