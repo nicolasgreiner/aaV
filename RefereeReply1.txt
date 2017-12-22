@@ -26,12 +26,15 @@ manuscript.  We thereby follow the referee's initial ordering:
    the lines lines are fewer and better to differentiate. The absolute 
    plot only serves to give the order of magnitude of the respective 
    cross sections.
-6) The scales are determined by building an envelope around the 
-   variation of the scaledependences detailed between eq. (3.2) and 
-   (3.3). The ratio is then taken with respect to the central LO 
-   prediction. "Hence, our NLO EW results exhibits the exact same 
-   muF-dependence as the LO result", as is stated in the text directly 
-   above eq. (3.3).
+6) The scales uncertainties are determined by building an envelope 
+   around the variation of the scale dependences detailed between 
+   eq. (3.2) and (3.3). The ratio is then taken with respect to the 
+   central LO prediction. "Hence, our NLO EW results exhibits the 
+   exact same muF-dependence as the LO result", as is stated in the 
+   text directly above eq. (3.3). A sentence detailing this has also 
+   been added to the caption of Fig. 4. In that sense, we do not 
+   plot the electroweak correction as such, but the whole NLO EW 
+   prediction, as the plot labels suggest.
 7) We have completed the sentence with mathematical relations of the sizes 
    of the QCD and EW corrections, it should be much clearer now.
 8)  The figure captions have been corrected.
